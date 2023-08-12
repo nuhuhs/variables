@@ -2,18 +2,18 @@ repeat wait() until game:IsLoaded() and game.Players.LocalPlayer.Character
 
 -- Client
 
-local players = game:GetService('Players');
-local client = players.LocalPlayer;
-local character = client.Character;
-local hrp = character:WaitForChild('HumanoidRootPart', math.huge);
-local hum = character:WaitForChild('Humanoid', math.huge);
+getgenv().players = game:GetService('Players');
+getgenv().client = players.LocalPlayer;
+getgenv().character = client.Character;
+getgenv().hrp = character:WaitForChild('HumanoidRootPart', math.huge);
+getgenv().hum = character:WaitForChild('Humanoid', math.huge);
 
 -- Services
 
-local LogService = game:GetService('LogService');
-local RunService = game:GetService('RunService');
-local ReplicatedStorage = game:GetService('ReplicatedStorage');
-local HttpService = game:GetService('HttpService');
+getgenv().LogService = game:GetService('LogService');
+getgenv().RunService = game:GetService('RunService');
+getgenv().ReplicatedStorage = game:GetService('ReplicatedStorage');
+getgenv().HttpService = game:GetService('HttpService');
 
 
 local function updateChar()
